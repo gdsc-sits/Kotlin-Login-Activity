@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.educt">
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -9,24 +12,27 @@
         android:roundIcon="@mipmap/student_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Educt">
-
-
         <activity
-            android:name=".RegisterActivity"/>
-
-
+            android:name=".AttendanceActivity"
+            android:exported="true"
+            android:label="@string/title_activity_attendance"
+            android:theme="@style/Theme.Educt.NoActionBar" />
+        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
-
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="android:screenOrientation"
+            android:stateNotNeeded="true"/>
     </application>
 
 </manifest>

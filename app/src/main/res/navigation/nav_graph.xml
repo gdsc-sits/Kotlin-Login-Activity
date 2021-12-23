@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sourceFragment">
+    <fragment
+        android:id="@+id/sourceFragment"
+        android:name="com.example.educt.SourceFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_source" >
+        <action
+            android:id="@+id/action_sourceFragment_to_viewAttendanceFragment"
+            app:destination="@id/viewAttendanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAttendanceFragment"
+        android:name="com.example.educt.ViewAttendanceFragment"
+        android:label="View Attendance Fragment"
+        tools:layout="@layout/fragment_view_attendance" >
+        <action
+            android:id="@+id/action_viewAttendanceFragment_to_sourceFragment"
+            app:destination="@id/sourceFragment"
+            app:popUpTo="@id/sourceFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
