@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Educt</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Take Attendance Fragment</string>
+    <string name="title_activity_attendance">AttendanceActivity</string>
+
+
+
 </resources>
