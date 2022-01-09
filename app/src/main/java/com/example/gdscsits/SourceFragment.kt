@@ -17,8 +17,6 @@ import kotlinx.android.synthetic.main.fragment_source.*
 class SourceFragment : Fragment() {
 
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,13 +27,14 @@ class SourceFragment : Fragment() {
         val takeAttendanceButton = view.findViewById<Button>(R.id.btn_take_attendance)
         val viewAttendanceButton = view.findViewById<Button>(R.id.btn_view_attendance)
         val logoutButton = view.findViewById<Button>(R.id.btn_logout)
-
+        //val gdscButton=view.findViewById<Button>(R.id.gdscid)
         val dscButton=view.findViewById<Button>(R.id.dsc_bt)
         val sinhgadButton=view.findViewById<Button>(R.id.sinhgad_bt)
 
 
 
-
+        //gdscButton.setOnClickListener { findNavController()
+         //   .navigate(R.id.action_sourceFragment_to_profileFragment)}
 
         takeAttendanceButton.setOnClickListener {
             val intent = Intent(requireActivity(), AttendanceActivity::class.java)
